@@ -42,5 +42,5 @@ function mapStateToProps(state) {
     return { posts: state.posts };
 }
 
-//there is null below as first argument because we aren't passing in mapStateToProps function
+
 export default connect(mapStateToProps, { fetchPosts })(PostsIndex);
