@@ -10,12 +10,14 @@ class PostsIndex extends Component {
     }
 
     renderPosts() {
-        console.log(this.props.posts);
+        // console.log(this.props.posts);
         //using lodash's map function since it is object we are looping through, not array
         return _.map(this.props.posts, post => {
             return (
                 <li className="list-group-item" key={post.id}>
-                {post.title}
+                    <Link to={`/posts/${post.id}` }>
+                        {post.title}
+                    </Link>
                 </li>
             );
         });
